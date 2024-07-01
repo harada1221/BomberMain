@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c6135c774d4c42d48a6ced1af949e185
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 230024
+  packageName: Cute Humanoid Animals
+  packageVersion: 1.0
+  assetPath: Assets/Cute Humanoid Animals/Animations/AnimatorController/Deer.controller
+  uploadId: 519379

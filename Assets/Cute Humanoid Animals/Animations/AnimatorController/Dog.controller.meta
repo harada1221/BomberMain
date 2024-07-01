@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bfe6e4442f6049e58ec68f5cf079c932
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 230024
+  packageName: Cute Humanoid Animals
+  packageVersion: 1.0
+  assetPath: Assets/Cute Humanoid Animals/Animations/AnimatorController/Dog.controller
+  uploadId: 519379

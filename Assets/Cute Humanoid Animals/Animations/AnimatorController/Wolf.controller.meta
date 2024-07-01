@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6249cc54b1a1440e955e7f48664099f7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 230024
+  packageName: Cute Humanoid Animals
+  packageVersion: 1.0
+  assetPath: Assets/Cute Humanoid Animals/Animations/AnimatorController/Wolf.controller
+  uploadId: 519379
