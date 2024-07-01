@@ -19,6 +19,7 @@ public class Block : MonoBehaviour
     /// </summary>
     public void ChangeFlag()
     {
+        Debug.Log("åƒÇ—èoÇµ");
         _isFlag = !_isFlag;
         if(_isFlag)
         {

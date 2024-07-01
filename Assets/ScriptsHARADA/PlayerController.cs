@@ -51,15 +51,6 @@ public class PlayerController : MonoBehaviour
 
         // 旗設置
         Debug.Log("旗設置OR旗回収");
-        RaycastHit hit;
-        if (Physics.Raycast(this.transform.position, transform.forward * 2f, out hit))
-        {
-            Block block = hit.transform.GetComponent<Block>();
-            if (block is not null)
-            {
-                block.ChangeFlag();
-            }
-        }
 
     }
 
@@ -108,10 +99,6 @@ public class PlayerController : MonoBehaviour
 
             // オブジェクトの回転を更新
             _transform.rotation = Quaternion.Euler(0, angleY, 0);
-        }
-        else
-        {
-
         }
     }
 }
