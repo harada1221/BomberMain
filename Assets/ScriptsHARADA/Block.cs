@@ -19,16 +19,7 @@ public class Block : MonoBehaviour
     /// </summary>
     public void ChangeFlag()
     {
-        Debug.Log("åƒÇ—èoÇµ");
         _isFlag = !_isFlag;
-        if(_isFlag)
-        {
-            gameObject.GetComponent<Renderer>().material.color = Color.red;
-        }
-        else
-        {
-            gameObject.GetComponent<Renderer>().material.color = Color.yellow;
-        }
     }
 
     /// <summary>

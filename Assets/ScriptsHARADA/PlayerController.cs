@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     [Header("移動の速さ"), SerializeField]
     private float _speed = 3;
 
+    private Animator _playerAnime = default;
     private Transform _transform = default;
     private CharacterController _characterController = default;
 
@@ -61,6 +62,7 @@ public class PlayerController : MonoBehaviour
     {
         _transform = this.transform;
         _characterController = GetComponent<CharacterController>();
+        _playerAnime = GetComponent<Animator>();
     }
 
     /// <summary>
@@ -83,6 +85,7 @@ public class PlayerController : MonoBehaviour
 
         if (_inputMove != Vector2.zero)
         {
+            _playerAnime.SetBool("Run", true);
             // 移動入力がある場合は、振り向き動作も行う
 
             // 操作入力からy軸周りの目標角度[deg]を計算
@@ -99,6 +102,10 @@ public class PlayerController : MonoBehaviour
 
             // オブジェクトの回転を更新
             _transform.rotation = Quaternion.Euler(0, angleY, 0);
+        }
+        else
+        {
+            _playerAnime.SetBool("Run", false);
         }
     }
 }
