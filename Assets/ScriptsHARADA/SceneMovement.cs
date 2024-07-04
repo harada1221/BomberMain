@@ -10,4 +10,12 @@ public class SceneMovement : MonoBehaviour
     {
         SceneManager.LoadScene(_nextSceneName);
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SceneManager.LoadScene(_nextSceneName);
+        }
+    }
 }

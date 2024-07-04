@@ -914,6 +914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 10
+  _playerType: 1
 --- !u!114 &2803578477655095829
 MonoBehaviour:
   m_ObjectHideFlags: 0

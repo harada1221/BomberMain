@@ -6,14 +6,18 @@ using UnityEngine.InputSystem;
 /// </summary>
 public sealed class PlayerData : MonoBehaviour
 {
+
+    [SerializeField, Header("最大人数")]
+    private int _maxPlayerCount = 4;
     // シングルトンインスタンス
     public static PlayerData Instance { get; private set; }
 
-    // キャラクター選択情報
-    private GameObject[] _playerObject = default;
-
     // 現在のプレイヤー数
     public int CurrentPlayerCount { get; set; }
+    // デバイス情報配列
+    public InputDevice[] InputDevices{ get; set; }
+    // 最大プレイヤー人数
+    public int MaxPlayer { get=>_maxPlayerCount;}
 
     private void Awake()
     {
@@ -23,23 +27,11 @@ public sealed class PlayerData : MonoBehaviour
             Instance = this;
             // オブジェクトを保持
             DontDestroyOnLoad(gameObject);
+            InputDevices = new InputDevice[_maxPlayerCount];
         }
         else
         {
             Destroy(gameObject);
-        }
-    }
-
-    /// <summary>
-    /// playerDevice情報
-    /// </summary>
-    private class PlayerInfo
-    {
-        public InputDevice PairWithDevice { get; private set; } = default;
-
-        public PlayerInfo(InputDevice pairWithDevice)
-        {
-            PairWithDevice = pairWithDevice;
         }
     }
 }
