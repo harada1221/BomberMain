@@ -691,6 +691,7 @@ GameObject:
   - component: {fileID: 2879226420294444800}
   - component: {fileID: 2803402305138924231}
   - component: {fileID: 3396298578349349011}
+  - component: {fileID: 2008844215988375093}
   m_Layer: 0
   m_Name: plyerRacoon
   m_TagString: Untagged
@@ -776,7 +777,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 10
-  _playerType: 6
 --- !u!114 &3396298578349349011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -903,6 +903,19 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &2008844215988375093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3879743290261344048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21503edd2c01821478ce8b03a77317af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerType: 6
 --- !u!1 &3892422459629869009
 GameObject:
   m_ObjectHideFlags: 0

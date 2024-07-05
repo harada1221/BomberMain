@@ -7,8 +7,12 @@ using UnityEngine.InputSystem;
 public class PlayerJoinManager : MonoBehaviour
 {
     // プレイヤーがゲームにJoinするためのInputAction
-    [SerializeField] 
+    [SerializeField]
     private InputAction _inputAction = default;
+    [SerializeField]
+    private PlayerInput _playerInput = default;
+    [SerializeField]
+    private GameObject _parent = default;
 
     // Join済みのデバイス情報
     private InputDevice[] _joinedDevices = default;
@@ -50,6 +54,14 @@ public class PlayerJoinManager : MonoBehaviour
                 return;
             }
         }
+
+        GameObject gameObject = Instantiate(
+             _playerInput.gameObject,
+             _parent.transform
+             );
+
+        // Set the parent
+        gameObject.transform.SetParent(_parent.transform);
 
         // Joinしたデバイス情報を保存
         _joinedDevices[_currentPlayerCount] = context.control.device;

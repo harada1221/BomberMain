@@ -330,6 +330,7 @@ GameObject:
   - component: {fileID: 8399309974785570120}
   - component: {fileID: 4537675013053706482}
   - component: {fileID: 964420620348685536}
+  - component: {fileID: 6438041030336049981}
   m_Layer: 0
   m_Name: plyerDog
   m_TagString: Untagged
@@ -415,7 +416,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 10
-  _playerType: 0
 --- !u!114 &964420620348685536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,6 +542,19 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &6438041030336049981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759372779265584211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21503edd2c01821478ce8b03a77317af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerType: 0
 --- !u!1 &1180061448196109429
 GameObject:
   m_ObjectHideFlags: 0

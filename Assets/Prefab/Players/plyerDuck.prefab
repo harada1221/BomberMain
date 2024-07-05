@@ -333,6 +333,7 @@ GameObject:
   - component: {fileID: 447318947140687331}
   - component: {fileID: 979921822033414252}
   - component: {fileID: 2485915965109622407}
+  - component: {fileID: 6033831341085956356}
   m_Layer: 0
   m_Name: plyerDuck
   m_TagString: Untagged
@@ -418,7 +419,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 10
-  _playerType: 4
 --- !u!114 &2485915965109622407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,6 +545,19 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &6033831341085956356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3607559244038661259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21503edd2c01821478ce8b03a77317af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerType: 4
 --- !u!1 &4331149595766692602
 GameObject:
   m_ObjectHideFlags: 0

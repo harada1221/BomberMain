@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6062494311339168512}
   - component: {fileID: 6724973134748136206}
   - component: {fileID: 4765542890241043925}
+  - component: {fileID: 8965299844704725843}
   m_Layer: 0
   m_Name: plyerFox
   m_TagString: Untagged
@@ -98,7 +99,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 10
-  _playerType: 5
 --- !u!114 &4765542890241043925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,6 +225,19 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &8965299844704725843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355744182477542500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21503edd2c01821478ce8b03a77317af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerType: 5
 --- !u!1 &515890466354782291
 GameObject:
   m_ObjectHideFlags: 0

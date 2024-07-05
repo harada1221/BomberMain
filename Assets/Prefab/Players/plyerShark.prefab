@@ -936,6 +936,7 @@ GameObject:
   - component: {fileID: 6880883663000214683}
   - component: {fileID: 920558067172355137}
   - component: {fileID: 9032126074551262139}
+  - component: {fileID: -1830845392284075167}
   m_Layer: 0
   m_Name: plyerShark
   m_TagString: Untagged
@@ -1021,7 +1022,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 10
-  _playerType: 7
 --- !u!114 &9032126074551262139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1148,6 +1148,19 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &-1830845392284075167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6157702966233983632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21503edd2c01821478ce8b03a77317af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerType: 7
 --- !u!1 &6677758190927346665
 GameObject:
   m_ObjectHideFlags: 0

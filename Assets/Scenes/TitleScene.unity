@@ -517,7 +517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCountText: {fileID: 1262785436}
-  _playerObject: {fileID: 2803578477655095829, guid: 475abffa21f8a3f489e3cf54577bb143, type: 3}
+  _playerObject: {fileID: 0}
 --- !u!114 &1242657159
 MonoBehaviour:
   m_ObjectHideFlags: 0

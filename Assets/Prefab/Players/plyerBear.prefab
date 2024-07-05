@@ -829,6 +829,7 @@ GameObject:
   - component: {fileID: 5628536544934069377}
   - component: {fileID: 5220195664440272820}
   - component: {fileID: 2803578477655095829}
+  - component: {fileID: 5229783957574937324}
   m_Layer: 0
   m_Name: plyerBear
   m_TagString: Untagged
@@ -914,7 +915,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 10
-  _playerType: 1
 --- !u!114 &2803578477655095829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1041,6 +1041,19 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &5229783957574937324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6337675506918068390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21503edd2c01821478ce8b03a77317af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerType: 1
 --- !u!1 &7120977078838544930
 GameObject:
   m_ObjectHideFlags: 0

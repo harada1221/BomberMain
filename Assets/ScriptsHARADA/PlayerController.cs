@@ -6,8 +6,6 @@ public class PlayerController : MonoBehaviour
 {
     [Header("移動の速さ"), SerializeField]
     private float _speed = 3;
-    [SerializeField, Header("キャラクタータイプ")]
-    private PlayerType _playerType = default;
 
     private Animator _playerAnime = default;
     private Transform _transform = default;
@@ -16,19 +14,6 @@ public class PlayerController : MonoBehaviour
     private Vector2 _inputMove = default;
     private float _verticalVelocity = default;
     private float _turnVelocity = default;
-
-    public enum PlayerType
-    {
-        Dog,
-        Bear,
-        Cat,
-        Dear,
-        Duck,
-        Fox,
-        Racoon,
-        Shark,
-        Tiger
-    }
 
     /// <summary>
     /// 移動Action
