@@ -7,11 +7,11 @@ public class VirtualMouseManager : MonoBehaviour
 {
     // カーソルの親オブジェクト
     [SerializeField] 
-    private RectTransform _root;
+    private RectTransform _root = default;
 
     // プレイヤーのカーソルPrefab一覧
     [SerializeField]
-    private VirtualMouseInput[] _cursorPrefabs;
+    private VirtualMouseInput[] _cursorPrefabs = default;
 
     [SerializeField] 
     private string _moveActionName = "Move";
@@ -26,24 +26,24 @@ public class VirtualMouseManager : MonoBehaviour
     public void OnPlayerJoined(PlayerInput playerInput)
     {
         // インデックスのチェック
-        var playerIndex = playerInput.playerIndex;
+        int playerIndex = playerInput.playerIndex;
         if (playerIndex < 0 || playerIndex >= _cursorPrefabs.Length)
         {
             return;
         }
 
         // カーソルの生成
-        var cursor = Instantiate(_cursorPrefabs[playerIndex], _root);
+        VirtualMouseInput cursor = Instantiate(_cursorPrefabs[playerIndex], _root);
         cursor.name = $"Cursor#{playerIndex}";
 
         // カーソルを管理リストに追加
         _cursors.Add(cursor);
 
         // InputActionの取得
-        var actions = playerInput.actions;
+        InputActionAsset actions = playerInput.actions;
 
-        var moveAction = actions.FindAction(_moveActionName);
-        var leftButtonAction = actions.FindAction(_leftButtonActionName);
+        InputAction moveAction = actions.FindAction(_moveActionName);
+        InputAction leftButtonAction = actions.FindAction(_leftButtonActionName);
 
         // ActionPropertyの設定
         if (moveAction != null)
@@ -61,10 +61,10 @@ public class VirtualMouseManager : MonoBehaviour
     {
 
         // カーソルを管理リストから削除
-        var playerIndex = playerInput.playerIndex;
+        int playerIndex = playerInput.playerIndex;
 
         // 生成されたカーソル取得
-        var cursor = _cursors.Find(c => c != null && c.name == $"Cursor#{playerIndex}");
+        VirtualMouseInput cursor = _cursors.Find(c => c != null && c.name == $"Cursor#{playerIndex}");
         if (cursor == null) return;
 
         // カーソルの削除

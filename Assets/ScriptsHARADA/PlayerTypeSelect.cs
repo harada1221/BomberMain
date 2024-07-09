@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerTypeSelect : MonoBehaviour
@@ -19,5 +17,5 @@ public class PlayerTypeSelect : MonoBehaviour
         Tiger
     }
 
-    public PlayerType playerType { get => _playerType; }
+    public PlayerType GetplayerType { get => _playerType; }
 }

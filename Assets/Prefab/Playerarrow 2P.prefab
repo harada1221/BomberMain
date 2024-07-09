@@ -94,7 +94,7 @@ MonoBehaviour:
   m_CursorSpeed: 800
   m_ScrollSpeed: 45
   m_StickAction:
-    m_UseReference: 1
+    m_UseReference: 0
     m_Action:
       m_Name: Stick
       m_Type: 0
@@ -106,7 +106,7 @@ MonoBehaviour:
       m_Flags: 0
     m_Reference: {fileID: 6918732113127344265, guid: 6a9b4500221a3994c856ba3daf2f3d7e, type: 3}
   m_LeftButtonAction:
-    m_UseReference: 1
+    m_UseReference: 0
     m_Action:
       m_Name: Left Button
       m_Type: 0
