@@ -10,12 +10,13 @@ public class ArrowController : MonoBehaviour
     private Transform _rayTransform = default;
     [SerializeField, Header("ターゲットのレイヤー")]
     private LayerMask _targetLayer = default;
-    [SerializeField, Header("選択時の四角")]
-    private GameObject _selectSquare = default;
-    // 選択時の四角保存
-    private GameObject _square = default;
-    // 移動方向
-    private float _verticalVelocity = default;
+    [SerializeField, Header("選択時の丸")]
+    private GameObject _selectCircle = default;
+
+    private Vector2 _topLeft = default;
+    private Vector2 _downRight = default;
+    // 選択時の円保存
+    private GameObject _circle = default;
     // 入力方向
     private Vector2 _inputMove = default;
     // プレイヤー番号
@@ -38,29 +39,37 @@ public class ArrowController : MonoBehaviour
     /// </summary>
     private void Start()
     {
+        GameObject canvas = GameObject.FindGameObjectWithTag("Canvas");
+        Vector3[] corners = new Vector3[4];
+        canvas.GetComponent<RectTransform>().GetWorldCorners(corners);
+        // 上限と下限の座標を取得
+        _topLeft = corners[1];  // 左上
+        _downRight = corners[3];  // 右下
+
+
         _myTransform = this.transform;
         // 四角を生成
-        _square = Instantiate(_selectSquare, GameObject.FindGameObjectWithTag(PARENTNAME).transform);
+        _circle = Instantiate(_selectCircle, _rayTransform);
+        // プレイヤーの番号に合わせてカラーを決める
         switch (_playerNum)
         {
             case 0:
                 this.GetComponent<Image>().color = Color.blue;
-                _square.GetComponent<Image>().color = Color.blue;
+                _circle.GetComponent<Image>().color = Color.blue;
                 break;
             case 1:
                 this.GetComponent<Image>().color = Color.red;
-                _square.GetComponent<Image>().color = Color.red;
+                _circle.GetComponent<Image>().color = Color.red;
                 break;
             case 2:
                 this.GetComponent<Image>().color = Color.green;
-                _square.GetComponent<Image>().color = Color.green;
+                _circle.GetComponent<Image>().color = Color.green;
                 break;
             case 3:
                 this.GetComponent<Image>().color = Color.yellow;
-                _square.GetComponent<Image>().color = Color.yellow;
+                _circle.GetComponent<Image>().color = Color.yellow;
                 break;
         }
-        _square.SetActive(false);
     }
 
     /// <summary>
@@ -95,9 +104,10 @@ public class ArrowController : MonoBehaviour
             // キャラタイプ保存
             PlayerTypeSelect.PlayerType type = playerType.GetplayerType;
             Debug.Log(type);
-            _square.transform.position = playerType.transform.position;
+            // 親オブジェクト変更
+            _circle.transform.SetParent(playerType.transform);
             _isSelect = true;
-            _square.SetActive(_isSelect);
+            // プレイヤータイプ保存
             PlayerData.Instance.PlayerTypes[_playerNum] = type;
         }
     }
@@ -112,23 +122,33 @@ public class ArrowController : MonoBehaviour
         {
             return;
         }
+        // 親オブジェクト変更
+        _circle.transform.SetParent(_rayTransform);
+        _circle.transform.position = _rayTransform.position;
+        // プレイヤータイプ削除
+        PlayerData.Instance.PlayerTypes[_playerNum] = default;
         _isSelect = false;
-        _square.SetActive(_isSelect);
     }
 
     private void Update()
     {
-        Vector3 rayDirection = Vector3.forward;  // レイの方向を指定
-        Debug.DrawRay(_rayTransform.position, rayDirection * 100f, Color.red, 2f);  // レイを可視化
         // 操作入力と鉛直方向速度から、現在速度を計算
-        Vector3 moveVelocity = new Vector3(
+        Vector2 moveVelocity = new Vector2(
             _inputMove.x * _speed,
-            _inputMove.y * _speed,
-           _verticalVelocity
+            _inputMove.y * _speed
         );
         // 現在フレームの移動量を移動速度から計算
         Vector3 moveDelta = moveVelocity * Time.deltaTime;
 
+        if (_topLeft.x > _myTransform.position.x + moveDelta.x || _downRight.x < _myTransform.position.x + moveDelta.x)
+        {
+            moveDelta.x = 0f;
+        }
+        if (_topLeft.y < _myTransform.position.y + moveDelta.y || _downRight.y > _myTransform.position.y + moveDelta.y)
+        {
+            moveDelta.y = 0f;
+        }
         _myTransform.position += moveDelta;
+
     }
 }

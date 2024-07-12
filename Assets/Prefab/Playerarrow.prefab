@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: -3406728415929421891}
   - component: {fileID: 8390534109334416060}
   m_Layer: 3
-  m_Name: Playerarrow 1P
+  m_Name: Playerarrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,8 +126,7 @@ MonoBehaviour:
   _targetLayer:
     serializedVersion: 2
     m_Bits: 32
-  _selectSquare: {fileID: 5299651393077884310, guid: 61b69c5a595118d498d996c3799ced80, type: 3}
-  _parentObject: Canvas
+  _selectCircle: {fileID: 5299651393077884310, guid: 61b69c5a595118d498d996c3799ced80, type: 3}
 --- !u!114 &8390534109334416060
 MonoBehaviour:
   m_ObjectHideFlags: 0

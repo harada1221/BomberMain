@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 314601675}
   - component: {fileID: 314601677}
   - component: {fileID: 314601679}
+  - component: {fileID: 314601680}
   m_Layer: 5
   m_Name: CatButton
   m_TagString: Select
@@ -314,7 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21503edd2c01821478ce8b03a77317af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerType: 2
+  _playerType: 8
 --- !u!65 &314601679
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -336,6 +337,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 233.65, y: 228, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &314601680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314601672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 100, y: 100}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1 &373022697
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,6 +452,7 @@ GameObject:
   - component: {fileID: 632094480}
   - component: {fileID: 632094478}
   - component: {fileID: 632094483}
+  - component: {fileID: 632094484}
   m_Layer: 5
   m_Name: CatButton (1)
   m_TagString: Select
@@ -525,6 +551,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 233, y: 228, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &632094484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632094476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 100, y: 100}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,6 +682,7 @@ GameObject:
   - component: {fileID: 771556095}
   - component: {fileID: 771556093}
   - component: {fileID: 771556098}
+  - component: {fileID: 771556099}
   m_Layer: 5
   m_Name: BearButton
   m_TagString: Select
@@ -730,6 +781,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 233, y: 228, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &771556099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 771556091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 100, y: 100}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -881,6 +956,7 @@ GameObject:
   - component: {fileID: 980786796}
   - component: {fileID: 980786794}
   - component: {fileID: 980786799}
+  - component: {fileID: 980786800}
   m_Layer: 5
   m_Name: BearButton (1)
   m_TagString: Select
@@ -979,6 +1055,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 233, y: 288, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &980786800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 980786792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 100, y: 100}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1 &1279987246
 GameObject:
   m_ObjectHideFlags: 0
