@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2456820814301790785}
   - component: {fileID: 8802213958765450268}
   - component: {fileID: 8886261168916511475}
+  - component: {fileID: -9130077356714453590}
   m_Layer: 5
   m_Name: Playerarrow 4P
   m_TagString: Untagged
@@ -177,3 +178,15 @@ MonoBehaviour:
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 0}
+--- !u!114 &-9130077356714453590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7512447502731850475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 646c5783952ac014299a57eab5642c43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

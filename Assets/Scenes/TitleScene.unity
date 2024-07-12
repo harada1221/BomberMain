@@ -517,7 +517,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCountText: {fileID: 1262785436}
-  _playerObject: {fileID: 2803578477655095829, guid: 475abffa21f8a3f489e3cf54577bb143, type: 3}
+  _playerObject:
+  - {fileID: 964420620348685536, guid: 64b09d67cfbedc74eb66b529616eed1a, type: 3}
+  - {fileID: 2803578477655095829, guid: 475abffa21f8a3f489e3cf54577bb143, type: 3}
+  - {fileID: 560191297331578623, guid: 4b067f45548bd704e9b929e18d7df5bc, type: 3}
+  - {fileID: 8177662934356602664, guid: 142151e363c5051469916d809caf6699, type: 3}
+  - {fileID: 2485915965109622407, guid: eb2bc8fe2f641aa458c1ef82e8f7c433, type: 3}
+  - {fileID: 4765542890241043925, guid: a2e48367db971c642b1628e24cee4d56, type: 3}
+  - {fileID: 3396298578349349011, guid: 624c806a0cf78ac44bac2a1fd13761b5, type: 3}
+  - {fileID: 9032126074551262139, guid: 2a4d1c7d526209b46a7725cbdc6c06bd, type: 3}
+  - {fileID: 8428085573525383442, guid: f2dc3eec17298d94f98ea1156df58cc5, type: 3}
 --- !u!114 &1242657159
 MonoBehaviour:
   m_ObjectHideFlags: 0

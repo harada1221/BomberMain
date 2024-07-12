@@ -9,6 +9,11 @@ public class PlayerJoinManager : MonoBehaviour
     // プレイヤーがゲームにJoinするためのInputAction
     [SerializeField]
     private InputAction _inputAction = default;
+    // カーソルの親オブジェクト
+    [SerializeField]
+    private RectTransform _root = default;
+    [SerializeField]
+    private GameObject _playerPrefab = default;
 
     // Join済みのデバイス情報
     private InputDevice[] _joinedDevices = default;
@@ -50,13 +55,29 @@ public class PlayerJoinManager : MonoBehaviour
             }
         }
 
+        // プレイヤーをインスタンス化
+        PlayerInput player = PlayerInput.Instantiate(
+            prefab: _playerPrefab,
+            playerIndex: _currentPlayerCount,
+            pairWithDevice: context.control.device
+        );
+
+        // 親オブジェクトを設定
+        player.transform.SetParent(_root, false);
+
         // Joinしたデバイス情報を保存
         _joinedDevices[_currentPlayerCount] = context.control.device;
+
+        // プレイヤー番号保存
+        ArrowController arrowController = player.GetComponent<ArrowController>();
+        arrowController.PlayerNum = _currentPlayerCount;
+
         PlayerData.Instance.InputDevices[_currentPlayerCount] = _joinedDevices[_currentPlayerCount];
 
         _currentPlayerCount++;
 
         // シングルトンに現在のプレイヤー数を保存
         PlayerData.Instance.CurrentPlayerCount = _currentPlayerCount;
+
     }
 }
