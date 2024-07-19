@@ -20,7 +20,7 @@ public class PlayerJoinManager : MonoBehaviour
     // 現在のプレイヤー数
     private int _currentPlayerCount = 0;
 
-    private void Awake()
+    private void Start()
     {
         // 最大参加可能数で配列を初期化
         _joinedDevices = new InputDevice[PlayerData.Instance.MaxPlayer];
