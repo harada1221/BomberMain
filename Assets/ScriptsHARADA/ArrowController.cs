@@ -39,7 +39,7 @@ public class ArrowController : MonoBehaviour
     /// </summary>
     private void Start()
     {
-        GameObject canvas = GameObject.FindGameObjectWithTag("Canvas");
+        GameObject canvas = GameObject.FindGameObjectWithTag(PARENTNAME);
         Vector3[] corners = new Vector3[4];
         canvas.GetComponent<RectTransform>().GetWorldCorners(corners);
         // 上限と下限の座標を取得
@@ -140,6 +140,7 @@ public class ArrowController : MonoBehaviour
         // 現在フレームの移動量を移動速度から計算
         Vector3 moveDelta = moveVelocity * Time.deltaTime;
 
+        // 移動制限
         if (_topLeft.x > _myTransform.position.x + moveDelta.x || _downRight.x < _myTransform.position.x + moveDelta.x)
         {
             moveDelta.x = 0f;

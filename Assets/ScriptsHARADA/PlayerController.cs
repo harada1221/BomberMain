@@ -4,16 +4,34 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
-    [Header("移動の速さ"), SerializeField]
-    private float _speed = 3;
+    [SerializeField, Header("移動の速さ")]
+    private float _speed = 10f;
+    [SerializeField, Header("最大HP")]
+    private int _maxHp = 3;
+    [SerializeField, Header("爆弾のクールタイム")]
+    private float _bomCoolTime = 3f;
+    [SerializeField, Header("爆弾の爆発方向")]
+    private BomState _bomState = BomState.Straight;
+    [SerializeField, Header("旗のクールタイム")]
+    private float _flagCoolTime = 3f;
 
+    // 生存状況
+    private bool _isDead = false;
+    // アニメーション
     private Animator _playerAnime = default;
+    // myTransform
     private Transform _transform = default;
     private CharacterController _characterController = default;
-
+    // 移動情報
     private Vector2 _inputMove = default;
     private float _verticalVelocity = default;
     private float _turnVelocity = default;
+
+    public enum BomState
+    {
+        Straight,
+        Cross
+    }
 
     /// <summary>
     /// 移動Action

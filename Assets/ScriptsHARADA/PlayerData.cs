@@ -18,6 +18,8 @@ public sealed class PlayerData : MonoBehaviour
     public InputDevice[] InputDevices{ get; set; }
     // プレイヤー配列
     public PlayerTypeSelect.PlayerType[] PlayerTypes { get; set; }
+    // プレイヤー勝利数
+    public int[] PlayerWins { get; set; }
     // 最大プレイヤー人数
     public int MaxPlayer { get=>_maxPlayerCount;}
 
@@ -31,6 +33,7 @@ public sealed class PlayerData : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             InputDevices = new InputDevice[_maxPlayerCount];
             PlayerTypes = new PlayerTypeSelect.PlayerType[_maxPlayerCount];
+            PlayerWins = new int[_maxPlayerCount];
         }
         else
         {

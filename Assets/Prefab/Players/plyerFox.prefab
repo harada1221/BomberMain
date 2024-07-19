@@ -99,6 +99,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 10
+  _maxHp: 3
+  _bomCoolTime: 0
+  _bomState: 0
+  _flagCoolTime: 0
 --- !u!114 &4765542890241043925
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScene.unity
     guid: 31dc4f8682284c84abd4604fa637886f
   - enabled: 1
-    path: Assets/Scenes/MainScene.unity
+    path: Assets/Scenes/CharacterSelectScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
